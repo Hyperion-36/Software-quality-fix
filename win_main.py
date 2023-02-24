@@ -1,6 +1,6 @@
 from utils.config import Config, Umi, ScsModeFlag, WindowTopModeFlag  # 最先加载配置
 from utils.logger import GetLog
-from utils.asset import *  # 资源
+from utils.asset import Asset  # 资源
 from utils.data_structure import KeyList
 from utils.tool import Tool
 from utils.startup import Startup  # 启动方式
