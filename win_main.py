@@ -778,7 +778,7 @@ class MainWin:
                     except Exception as exc:
                         tk.messagebox.showerror(
                             '遇到了亿点小问题',
-                            f'引擎启动失败：{err}')
+                            f'引擎启动失败：{err}', exc)
                 labStart.bind(
                     '<Button-1>', lambda *e: engStart())
                 labStop.bind(
