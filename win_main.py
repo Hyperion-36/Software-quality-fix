@@ -17,7 +17,7 @@ from ocr.msn_batch_paths import MsnBatch
 from ocr.msn_quick import MsnQuick
 
 import os
-import ctypes
+
 from PIL import Image  # 图像
 import tkinter as tk
 
