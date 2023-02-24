@@ -46,6 +46,10 @@ class MainWin:
         self.ignoreBtn = ttk.Button()
         self.ignoreFrame = tk.Frame() 
         self.ignoreLabel = tk.Label() 
+        self.canvas = tk.Canvas()
+        self.canvasHeight = None
+        self.optCanvasWidth = None
+        self.optCanvasWidth = None
         # 需要运行时锁定的组件
 
         # 1.初始化主窗口
