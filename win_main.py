@@ -775,7 +775,7 @@ class MainWin:
                 def engStart():
                     try:
                         OCRe.start()
-                    except Exception as exc:
+                    except ValueError:
                         tk.messagebox.showerror(
                             '遇到了亿点小问题',
                             f'引擎启动失败：{err}', exc)
