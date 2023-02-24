@@ -920,9 +920,9 @@ class MainWin:
             # 检测是否可用
             try:
                 s = Image.open(path).size
-            except ValueError:
+            except ValueError as err:
                 tk.messagebox.showwarning(
-                    "遇到了一点小问题", f"图片载入失败。图片地址：\n{path}\n\n错误信息：\n{e}")
+                    "遇到了一点小问题", f"图片载入失败。图片地址：\n{path}\n\n错误信息：\n{err}")
                 return
             # 计算路径
             p = os.path.abspath(os.path.join(path, os.pardir))  # 父文件夹
@@ -1129,7 +1129,7 @@ class MainWin:
             # 初始化文本处理器
             try:
                 msnBat = MsnBatch()
-            except ValueError:
+            except ValueError as err:
                 tk.messagebox.showwarning('遇到了亿点小问题', f'{err}')
                 return  # 未开始运行，终止本次运行
             # 开始运行
