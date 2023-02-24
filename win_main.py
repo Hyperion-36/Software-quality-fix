@@ -57,15 +57,7 @@ class MainWin:
                             width=9)
             style.configure('gray.TCheckbutton', foreground='gray')
         initStyle()
-
-        # def initDPI():
-        #     # 调用api设置成由应用程序缩放
-        #     ctypes.windll.shcore.SetProcessDpiAwareness(1)
-        #     # 调用api获得当前的缩放因子
-        #     ScaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0)
-        #     # 设置缩放因子
-        #     self.win.tk.call('tk', 'scaling', ScaleFactor/100)
-
+        
 
         def initWin():
             self.win.title(Umi.name)
