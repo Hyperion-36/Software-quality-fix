@@ -41,6 +41,11 @@ class MainWin:
         self.table = ttk.Treeview()
         self.isAutoRoll = tk.IntVar()
         self.textOutput = tk.Text()
+        self.optCanvas = tk.Canvas() 
+        self.optFrame = tk.Frame() 
+        self.ignoreBtn = ttk.Button()
+        self.ignoreFrame = tk.Frame() 
+        self.ignoreLabel = tk.Label() 
         # 需要运行时锁定的组件
 
         # 1.初始化主窗口
