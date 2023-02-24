@@ -545,7 +545,7 @@ class MainWin:
                 ttk.Checkbutton(fr2, text='本次完成后执行',
                                 variable=Config.getTK('isOkMission')).pack(side='left')
                 okMissionDict = Config.get("okMission")
-                okMissionNameList = [i for i in okMissionDict.keys()]
+                okMissionNameList = list(okMissionDict.keys())
                 wid = ttk.Combobox(fr2, width=14, state="readonly", textvariable=Config.getTK('okMissionName'),
                                    value=okMissionNameList)
                 wid.pack(side='left')
