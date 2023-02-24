@@ -1142,7 +1142,7 @@ class MainWin:
     def startSingleClipboard(self):  # 开始单张识别的剪贴板任务
         try:  # 初始化快捷识图任务处理器
             msnQui = MsnQuick()
-        except Exception as err:
+        except ValueError as err:
             tk.messagebox.showwarning('遇到了亿点小问题', f'{err}')
             return  # 未开始运行，终止本次运行
         # 开始运行
