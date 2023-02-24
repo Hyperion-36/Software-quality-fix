@@ -1029,7 +1029,7 @@ class MainWin:
         self.textOutput.insert(position, text)
         if highlight and position == tk.END:  # 暂时只允许尾部插入
             self.textOutput.tag_add(  # 尾部插入要高亮前一行
-                highlight, f'end -1lines linestart', f'end -1lines lineend')
+                highlight, 'end -1lines linestart', 'end -1lines lineend')
         if self.isAutoRoll.get():  # 需要自动滚动
             self.textOutput.see(position)
 
