@@ -784,10 +784,10 @@ class MainWin:
                 def engStart():
                     try:
                         OCRe.start()
-                    except ValueError:
+                    except Exception as exc:
                         tk.messagebox.showerror(
                             '遇到了亿点小问题',
-                            f'引擎启动失败：{err}', exc)
+                            f'引擎启动失败：{exc}', exc)
                 labStart.bind(
                     '<Button-1>', lambda *e: engStart())
                 labStop.bind(
@@ -866,9 +866,9 @@ class MainWin:
                 parser = ArgumentParser()
                 parser.add_argument('--no_win', dest='isNoWin', type=bool)
                 return parser.parse_args()
-            except ValueError:
+            except Exception as err:
                 tk.messagebox.showerror(
-                    '遇到了一点小问题', f'程序启动参数解析失败。已切换为默认参数。\n{e}')
+                    '遇到了一点小问题', f'程序启动参数解析失败。已切换为默认参数。\n{err}')
 
                 class aaa:
                     isNoWin = False
