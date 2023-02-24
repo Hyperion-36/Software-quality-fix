@@ -21,7 +21,7 @@ import os
 
 from PIL import Image  # 图像
 import tkinter as tk
-
+import tkinter.font
 
 
 from tkinter import ttk
@@ -312,7 +312,7 @@ class MainWin:
                 fr3.grid_columnconfigure(1, weight=1)
                 self.balloon.bind(fr3, '调整【识别内容】选项卡中输出面板的字体样式')
                 tk.Label(fr3, text='输出面板字体').grid(column=0, row=0, sticky='w')
-                ff = tk.font.families()  # 获取系统字体
+                ff = tkinter.font.families()  # 获取系统字体
                 fontFamilies = []
                 fontFamiliesABC = []
                 for i in ff:
