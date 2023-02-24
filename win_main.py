@@ -28,6 +28,8 @@ from windnd import hook_dropfiles  # 文件拖拽
 from webbrowser import open as webOpen  # “关于”面板打开项目网址
 from argparse import ArgumentParser  # 启动参数
 
+import tkinter
+
 Log = GetLog()
 
 
