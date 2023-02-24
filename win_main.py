@@ -29,7 +29,6 @@ from windnd import hook_dropfiles  # 文件拖拽
 from webbrowser import open as webOpen  # “关于”面板打开项目网址
 from argparse import ArgumentParser  # 启动参数
 
-import tkinter
 
 Log = GetLog()
 
@@ -1246,7 +1245,7 @@ class MainWin:
         self.notebook.select(self.notebookTab[1])  # 切换到输出选项卡
         outputNow = self.textOutput.get("1.0", tk.END)
         if outputNow and not outputNow == "\n":  # 输出面板内容存在，且不是单换行（初始状态）
-            if not tkinter.messagebox.askokcancel('提示', '将清空输出面板。要继续吗？'):
+            if not tk.messagebox.askokcancel('提示', '将清空输出面板。要继续吗？'):
                 return
             self.panelClear()
         self.textOutput.insert(tk.END, tipsText)
